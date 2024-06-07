@@ -1,0 +1,57 @@
+{
+  "name": "humancode-palm-qrcode-sample",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "prepare": "husky install",
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx,.vue --fix --quiet src"
+  },
+  "dependencies": {
+    "@mediapipe/tasks-vision": "^0.10.12",
+    "@vueuse/core": "^10.6.1",
+    "axios": "^1.7.2",
+    "pinia": "^2.1.7",
+    "vant": "^4.9.1",
+    "vue": "^3.3.4",
+    "vue-qrcode": "^2.2.2",
+    "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^18.4.2",
+    "@commitlint/config-conventional": "^18.4.2",
+    "@minko-fe/postcss-pxtorem": "^1.5.0",
+    "@types/node": "^20.9.0",
+    "@typescript-eslint/eslint-plugin": "^6.11.0",
+    "@unocss/preset-attributify": "^0.57.4",
+    "@unocss/preset-uno": "^0.57.4",
+    "@vant/auto-import-resolver": "^1.2.1",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vitejs/plugin-vue-jsx": "^3.0.2",
+    "amfe-flexible": "^2.2.1",
+    "eslint": "^8.53.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-vue": "^9.18.1",
+    "husky": "^8.0.3",
+    "less": "^4.2.0",
+    "lint-staged": "^15.1.0",
+    "prettier": "^3.1.0",
+    "typescript": "^5.0.2",
+    "unocss": "^0.57.4",
+    "unplugin-auto-import": "^0.16.7",
+    "unplugin-vue-components": "^0.25.2",
+    "vite": "^4.4.5",
+    "vite-plugin-eslint": "^1.8.1",
+    "vue-tsc": "^1.8.5"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,tsx,ts,vue,json}": [
+      "npm run lint",
+      "git add ."
+    ]
+  }
+}
