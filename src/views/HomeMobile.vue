@@ -17,6 +17,7 @@ let vcode = '';
 const appScheme = 'humancode://h5/hc/qrcode';
 const { appText } = useLanguage();
 const ifShowView = ref(false);
+const BASE_URL= 'https://humancodeai.com'
 
 const handleRedirect = (url: string) => {
   console.log('urlscheme' + url);
@@ -69,7 +70,7 @@ const asyncPollData = async () => {
 };
 
 async function verifySeesionId() {
-  const url = `${import.meta.env.VITE_BASE_URL}/api/session/v2/check`;
+  const url =  BASE_URL +'/api/session/v2/check';
   const response = await axios({
     method: 'get',
     url: url,
@@ -89,7 +90,7 @@ async function verifySeesionId() {
 }
 
 async function getPollData() {
-  const url = `${import.meta.env.VITE_BASE_URL}/api/session/v2/result`;
+  const url = BASE_URL + '/api/session/v2/result';
 
   const response = await axios({
     method: 'get',

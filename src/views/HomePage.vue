@@ -37,6 +37,7 @@ let sessionId = '';
 let requester = '';
 let vcode = '';
 const isShowPopView = ref(false);
+const BASE_URL= 'https://humancodeai.com'
 
 async function closePop() {
   isShowPopView.value = false;
@@ -98,7 +99,7 @@ const asyncPollData = async () => {
 };
 
 async function verifySeesionId() {
-  const url = `${import.meta.env.VITE_BASE_URL}/api/session/v2/check`;
+  const url = BASE_URL + '/api/session/v2/check';
   const response = await axios({
     method: 'get',
     url: url,
@@ -118,7 +119,7 @@ async function verifySeesionId() {
 }
 
 async function getPollData() {
-  const url = `${import.meta.env.VITE_BASE_URL}/api/session/v2/result`;
+  const url = BASE_URL + '/api/session/v2/result';
   const response = await axios({
     method: 'get',
     url: url,
